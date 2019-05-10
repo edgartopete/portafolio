@@ -13,7 +13,7 @@ $(document).ready(function() {
 
     database.ref("/portafolio").once("value", function (snap) {
         //console.log("initial data loaded!", snap.numChildren());
-        var docHeigth=$(document).height();
+        var docHeigth=$(document).height()+700;
         $('html').attr('style', 'height:'+  docHeigth+'px');
         $('body').attr('style', 'height:'+ docHeigth+'px');
         
