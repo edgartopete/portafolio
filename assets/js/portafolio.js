@@ -1,15 +1,28 @@
 /*var newProyect = {
-    title: 'Train Schedule',
-    des: 'A web train schedule application that host arrival and departure data, this app was build using Firebase,jQuery, moment.js and ',
+    title: 'Mambo (Bootcamp Project 1)',
+    des: 'A web app to connect clients with service providers to look for service recommandations nearby, analyze availability and prices in order to schedule appointments. , this app was build using Firebase(Authentication, Database and Storage),jQuery, moment.js and ',
     img:'train.jpg',
-    tec: ['fa-html5','fa-css3-alt','fa-js'],
-    gitHub: 'https://github.com/edgartopete/topics',
-    sample: 'https://edgartopete.github.io/topics/'
+    tec: ['fa-html5','fa-css3-alt','fa-js','fa-google','fa-facebook-squre'],
+    gitHub: 'https://github.com/edgartopete/mambo',
+    sample: 'https://edgartopete.github.io/mambo/'
 }
 
 
-database.ref("/portafolio").push(newProyect);   */
+database.ref("/portafolio").push(newProyect); */  
 $(document).ready(function() {
+
+    database.ref("/portafolio").once("value", function (snap) {
+        //console.log("initial data loaded!", snap.numChildren());
+        var docHeigth=$(document).height()+700;
+        $('html').attr('style', 'height:'+  docHeigth+'px');
+        $('body').attr('style', 'height:'+ docHeigth+'px');
+        
+        $('body').attr('class','bg');
+       
+       
+       
+    }); 
+   
  //to show data saved
 database.ref("/portafolio").on("child_added", function (childSnapshot) {
 
@@ -21,7 +34,7 @@ database.ref("/portafolio").on("child_added", function (childSnapshot) {
     var img=childSnapshot.val().img;
 
     var newCard = $("<div>");
-        newCard.addClass("col s12 m6");
+        newCard.addClass("col s12 m4");
     var divCard =$("<div>");
         divCard.addClass("card");        
     var divImg = $("<div>");
@@ -45,7 +58,6 @@ database.ref("/portafolio").on("child_added", function (childSnapshot) {
     cardCont.prepend(p);
     if(tec.length>0){
         $.each(tec, function( index, value ) {
-            console.log( '<i class="fab '+ value +' fa-2x"></i>');
             p.append('<i class="fab '+ value +' fa-2x"></i>');
           });
     }
@@ -61,4 +73,5 @@ database.ref("/portafolio").on("child_added", function (childSnapshot) {
     $("#area").append(newCard);
     
 });
+
 });
