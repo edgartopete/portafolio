@@ -1,7 +1,13 @@
 $(document).ready(function () {
+    var docHeigth=$(document).height()+500;
+        $('html').attr('style', 'height:'+  docHeigth+'px');
+        $('body').attr('style', 'height:'+ docHeigth+'px');
+        
+        $('body').attr('class','bg');
     $('.sidenav').sidenav();
     $('.tooltipped').tooltip();
     $('.tooltipped').tooltip('open');
+    $('.collapsible').collapsible();
     /*Code for the text slader*/
     /*Credits: https://codepen.io/TyStelmach/pen/yygvNK */
 

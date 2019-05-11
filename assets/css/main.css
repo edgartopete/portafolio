@@ -118,3 +118,7 @@ a#prev:hover, a#next:hover {
   display: table;
   width: 100%;
 }
+/*Change back grodu to collapsible body*/
+.collapsible-body{
+  background-color: white;
+}
