@@ -1,14 +1,14 @@
 /*var newProyect = {
-    title: 'Mambo (Bootcamp Project 1)',
-    des: 'A web app to connect clients with service providers to look for service recommandations nearby, analyze availability and prices in order to schedule appointments. , this app was build using Firebase(Authentication, Database and Storage),jQuery, moment.js and ',
-    img:'train.jpg',
-    tec: ['fa-html5','fa-css3-alt','fa-js','fa-google','fa-facebook-squre'],
-    gitHub: 'https://github.com/edgartopete/mambo',
-    sample: 'https://edgartopete.github.io/mambo/'
+    title: 'Mambo (Bootcamp Project 2)',
+    des: 'A web app to connect clients with service providers, in thes version the app will let you create your stores and services. Also the user can send comment to the stores services, this app was build using Express,MySQL,Handlebars,jQuery and ',
+    img:'burger.png',
+    tec: ['fa-node-js','fas fa-database'],
+    gitHub: 'https://github.com/edgartopete/mamboV2.1',
+    sample: 'https://floating-oasis-25410.herokuapp.com/'
 }
 
 
-database.ref("/portafolio").push(newProyect); */  
+database.ref("/portafolio").push(newProyect);  */
 $(document).ready(function() {
 
     database.ref("/portafolio").once("value", function (snap) {
